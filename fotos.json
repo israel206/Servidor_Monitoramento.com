@@ -1,44 +1,44 @@
 [
     {
         "info": {
+            "titulo": "Mapa do Campus IV",
+            "subtitulo": "Rio Tinto"
+        },
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assetss/Esboco-APs-UFPB.png"
+    },
+    {
+        "info": {
             "titulo": "Nas",
             "subtitulo": "APs"
         },
-        "src": "assets/APs-Nas.png"
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/APs-Nas.png"
     },
     {
         "info": {
-            "titulo": "Pelourinho",
-            "subtitulo": "Alcântara"
+            "titulo": "Autenticação",
+            "subtitulo": "Autenticado/Falhas"
         },
-        "url": "http://www.guiaturismo.net/blog/wp-content/gallery/sao-luis-do-maranhao-pontos-turisticos/sao-luis-do-maranhao-pontos-turisticos-4.jpg"
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Conexoes-A-R.png"
     },
     {
         "info": {
-            "titulo": "Complexo Poço Azul",
-            "subtitulo": "Riachão"
+            "titulo": "Controle de Conexões",
+            "subtitulo": "Quantidade Logins"
         },
-        "url": "https://oimparcial.com.br/app/uploads/2019/03/chapada-das-mesas-maranhao-complexo-poco-azul-barletta.jpg"
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Controle-Conexao.png"
     },
     {
         "info": {
-            "titulo": "Lagoa das Andorinhas",
-            "subtitulo": "Santo Amaro"
+            "titulo": "Listas de Usuarios",
+            "subtitulo": "Usuarios"
         },
-        "url": "https://oimparcial.com.br/app/uploads/2019/03/circuito-lagoa-andorinha-gaivota-santo-amaro.jpg"
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/UsuariosCard.png"
     },
     {
         "info": {
-            "titulo": "Cachoeira do Santuário",
-            "subtitulo": "Chapada das Mesas"
+            "titulo": "Métricas geral",
+            "subtitulo": "Conexões"
         },
-        "url": "https://catracalivre.com.br/wp-content/uploads/2018/08/chacoeira-santuario-chapada-das-mesas-maranhao.jpg"
-    },
-    {
-        "info": {
-            "titulo": "Lençóis Maranhenses",
-            "subtitulo": "Barreirinhas"
-        },
-        "url": "https://www.brasilturismo.com/wp-content/uploads/2018/06/lencois.jpg"
+        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/graficos.png"
     }
 ]
