@@ -3,13 +3,13 @@
 	box-sizing: border-box;
 	margin: 0;
 } */
-html {
+/* html {
 	font: 16px Arial, Helvetica, sans-serif;
-}
+} */
 header {
 	display: flex;
 	flex-direction: column;
-	height: 30vh;
+	height: 38vh;
 }
 .slider {
 	flex: 1;

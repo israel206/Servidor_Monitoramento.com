@@ -1,44 +1,44 @@
 [
-    {
-        "info": {
-            "titulo": "Mapa do Campus IV",
-            "subtitulo": "Rio Tinto"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assetss/Esboco-APs-UFPB.png"
-    },
-    {
-        "info": {
-            "titulo": "Nas",
-            "subtitulo": "APs"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/APs-Nas.png"
-    },
-    {
-        "info": {
-            "titulo": "Autenticação",
-            "subtitulo": "Autenticado/Falhas"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Conexoes-A-R.png"
-    },
-    {
-        "info": {
-            "titulo": "Controle de Conexões",
-            "subtitulo": "Quantidade Logins"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Controle-Conexao.png"
-    },
-    {
-        "info": {
-            "titulo": "Listas de Usuarios",
-            "subtitulo": "Usuarios"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/UsuariosCard.png"
-    },
-    {
-        "info": {
-            "titulo": "Métricas geral",
-            "subtitulo": "Conexões"
-        },
-        "url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/graficos.png"
-    }
+	{
+		"info": {
+			"titulo": "Mapa do Campus IV",
+			"subtitulo": "Rio Tinto"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assetss/Esboco-APs-UFPB.png"
+	},
+	{
+		"info": {
+			"titulo": "Nas",
+			"subtitulo": "APs"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/APs-Nas.png"
+	},
+	{
+		"info": {
+			"titulo": "Autenticação",
+			"subtitulo": "Autenticado/Falhas"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Conexoes-A-R.png"
+	},
+	{
+		"info": {
+			"titulo": "Controle de Conexões",
+			"subtitulo": "Quantidade Logins"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/Controle-Conexao.png"
+	},
+	{
+		"info": {
+			"titulo": "Listas de Usuarios",
+			"subtitulo": "Usuarios"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/UsuariosCard.png"
+	},
+	{
+		"info": {
+			"titulo": "Métricas geral",
+			"subtitulo": "Conexões"
+		},
+		"url": "https://github.com/israel206/Servidor_Monitoramento.com/tree/main/assets/graficos.png"
+	}
 ]
