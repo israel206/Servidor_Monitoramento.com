@@ -1,6 +1,7 @@
-var imgQtd = 0
-var isParado = false
-var slideAtual = 0
+// variaveis
+var imgQtd = 0;
+var isParado = false;
+var slideAtual = 0;
 
 ajax('fotos.json', 'GET', (resposta) => {
   let fotos = JSON.parse(resposta)
@@ -16,7 +17,7 @@ ajax('fotos.json', 'GET', (resposta) => {
         </div>
       </div>`
   }
-
+  // pegando e calculando a quantidade de slideshow
   document.querySelector('.slider .painel').style.width = `calc(100vw * ${imgQtd})`
 
   setInterval(() => { if (! isParado) avancar() }, 8000)

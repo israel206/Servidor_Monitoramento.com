@@ -2,14 +2,17 @@
 /* * {
 	box-sizing: border-box;
 	margin: 0;
-} */
-/* html {
+}
+ html {
 	font: 16px Arial, Helvetica, sans-serif;
-} */
-header {
+}  */
+header#slideshow {
+	font: 16px Arial, Helvetica, sans-serif;
+	box-sizing: border-box;
+	margin: 0;
 	display: flex;
 	flex-direction: column;
-	height: 38vh;
+	height: 50vh;
 }
 .slider {
 	flex: 1;
