@@ -1,125 +1,135 @@
+<!-- ESTRUTURA HTML -->
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>servidor_autenticacao</title>
+	<!-- área de cabeçalho Generico da página -->
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title> Servidor autenticação </title>
 
-  <link rel="stylesheet" href="css/styles.css"/>
-  
-</head>
+		<!-- estilo ou design da página -->
+		<link rel="stylesheet" href="css/estilo.css"/>
 
-<script language="javascript" src="javascript/funcao.js"></script>
+	</head>
+	
+	<!-- Funcionalidade da página -->
+	<script language="javascript"  src="js/funcoes.js"></script>
 
-<body>
-    
-<div id="interface">
+	<!-- corpo do site -->
+	<body>
 
-  <header id="cabecalho">
-    <hgroup>
-      <h1>Servidor RADIUS</h1>
-      <h2>autenticação para serviços</h2>
-    </hgroup>
+		<!-- div= área de divisão -->
+    <div id="interface">
+			
+			<!-- área de cabeçalho -->
+			<header id="cabecalho">
+				<!-- grupo de títulos -->
+				<hgroup>
+					<!-- título -->
+					<h1> Servidor de autenticação RADIUS </h1>
+					<!-- subtítulo -->
+					<h2> Autenticação de acesso aos serviços do campus IV (Unidades Mamanguape e Rio Tinto) </h2>
+				</hgroup>
 
-    <img id="icone" src="img/freeradius.png"/>
+				<!-- tag img = imagens -->
+				<img id="icone" src="assets/freeradius.png"/>
 
-    <nav id="menu">
-      <h1>Menu Principal</h1>
-      <ul type="disc">
-        <li onmouseover="mudaFoto('img/home.png')" onmouseout="mudaFoto('img/freeradius.png')"><a href="index.html">Home</a></li>
-        <li onmouseover="mudaFoto('img/especificacoes.png')" onmouseout="mudaFoto('img/freeradius.png')"><a href="specs.html">Especificações</a></li>
-        <li onmouseover="mudaFoto('img/fotos.png')" onmouseout="mudaFoto('img/freeradius.png')"><a href="fotos.html">Fotos</a></li>
-        <li onmouseover="mudaFoto('img/multimidia.png')" onmouseout="mudaFoto('img/freeradius.png')"><a href="multimidia.html">Multimídia</a></li>
-      </ul>
-    </nav>
-  </header>
+				<!-- tag nav = container de navegação -->
+				<nav id="menu">
+					<h1>Menu Principal</h1>
+					<!-- Ordered lists -ol = lista ordenada |type="1,a,A,i,I"- start="3"| -->
+					<!-- Unordered lists - ul = lista não ordenadas |circle,square, disc| List items - li -->
+					<ul type="disc">
+						<li onmouseover="mudaFoto('assets/home.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="index.html">Home</a></li>
+						<li onmouseover="mudaFoto('assets/especificacoes.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="specs.html">Especificações</a></li>
+						<li onmouseover="mudaFoto('assets/fotos.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="fotos.html">Fotos</a></li>
+						<li onmouseover="mudaFoto('assets/multimidia.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="multimidia.html">Multimídia</a></li>
+					</ul>
+				</nav>
 
-  <section id="corpo">
+			</header>
 
-    <article id="noticia-principal">
-      <header id="cabecalho-artigo">
-        <hgroup>
-          <h3>Tecnologia>&nbsp;&nbsp;&nbsp;Inovações</h3>
-          <h1>Saiba tudo sobre o Servidor de RADIUS</h1>
-          <h2>por Israel Silva</h2>
-          <h3 class="direita">Novembro/2021</h3>
-        </hgroup>
-      </header>
+		<!-- Área principal do conteudos-->
+    <section id="corpo">
+			<!-- tag article = artigos -->
+			<article id="noticia-principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<!-- nbsp = Non-breaking Space -->
+						<h3> Servidor de autenticação RADIUS > &nbsp;&nbsp;&nbsp; serviços </h3>
+						<h1> Saiba tudo sobre o Servidor de autenticação RADIUS </h1>
+						<h2> por Israel Silva </h2>
+						<!-- usando Class invés de ID -->
+						<h3 class="direita"> Atualizado em /Novembro/2021 </h3>
+					</hgroup>
+				</header>
 
-        <h2>O que é</h2>
-        <p>O <span style="font-weight:900;">Servidor autenticação RADIUS</span> falta colocar contexto <a href="http://freeradius.com" target="_blank"><i>Projeto de implementação de um serviço de autenticação</i></a>, falta colocar contexto &shy;con&shy;ferên&shy;cias. colocar contexto dos servidor <em> Servidor RADIUS</em> falta colocar contexto.</p>
+					<h2> O que é </h2>
+					<!-- tag p = paragrafo - &shy = soft hyphen. Burro. -->
+					<!-- tag b = negrito - i OU em = itálico -->
+					<p> O <span style="font-weight:900;"> Servidor de autenticação RADIUS </span> é um acessório em forma de óculos que possibilita a interação dos usuários com diversos conteúdos em realidade aumentada. Também chamado de <a href="http://freeradius.org" target="_blank"><i> Servidor RADIUS </i></a>, o eletrônico é capaz de tirar fotos a partir de comandos de voz, enviar mensagens instantâneas e realizar vídeo&shy;con&shy;ferên&shy;cias. Seu lançamento está previsto para 2014, e seu preço deve ser de US$ 1,5 mil. Atualmente o <em>Servidor RADIUS </em> encontra-se em fase de testes e já possui um vídeo totalmente gravado com o dispositivo. Além disso, a companhia de buscas registrou novas patentes anti-furto e de desbloqueio de tela para o acessório.</p>
 
-        <figure class="foto-legenda">
-          <img src="img/autenticacao.png"/>
-          <figcaption>
-            <h3> Servidor RADIUS</h3>
-            <p>Uma nova maneira de ver mundo</p>
-          </figcaption>
-        </figure>
+				<!-- tag figure = figuração semântica de imagem e legendas -->
+				<figure class="foto-legenda">
+					<img src="assets/radius-windows-server.png"/>
+					<!-- tag figcation = colocar legendas -->
+					<figcaption>
+						<h3> Servidor RADIUS </h3>
+						<p> Forma de autenticação para utilização dos servidos a internet wi-fi. </p>
+					</figcaption>
+				</figure>
 
-        <h2>servidor</h2>
-        <p> falta colocar contexto.</P>
+					<h2> Configuração que foram feitas, onde a tabelas mostrara </h2>
+					<p> Não há uma data específica e oficial para o dispositivo ser lançado, ainda. Pode ser que ele esteja disponível em demonstrações a partir de 2013, mas seu lançamento para as lojas fica para, pelo menos, 2014.</P>
 
-    <h2>Especificações Técnicas</h2>
+				<h2> Especificações Técnicas </h2>
+				<!-- tag table = tabelas -->
+				<table id="tabelaspec">
+					<caption> Tabela: Técnica de configuração <span> Novembro/2021 </span></caption>
 
-    <table id="tabelaspec">
+					<!-- table rows = tr | table data = td  -->
+					<tr><td class="col-esquerda">FreeRadius Arquivo</td> <td class="col-direita">Alteração</td></tr>
 
-      <caption>Tabela Técnica do servidor <span>Novembro/2021</span></caption>
+					<tr><td class="col-esquerda">/etc/freeradius/3.0/mods-enabled/sql</td> <td class="col-direita">Configurações dos parâmetros de conexão do FreeRadius com o banco de dados no MySQL, neste arquivo utiliza-se o usuário e senha que foi criado na hora da instalação do MySQL e especifica-se o nome do banco de dados do FreeRadius no MySQL.</td></tr>
 
-      <tr><td class="ce">Tela</td> <td class="cd">Resolução equivalente a tela de 25"</td></tr>
-      <tr><td rowspan="2"class="ce">Camera</td> <td class="cd">5MP para fotos</td></tr>
-      <tr><td class="cd">720p para vídeos</td></tr>
-      <tr><td rowspan="2"class="ce">Conectividade</td> <td class="cd">Wi-Fi</td></tr>
-      <tr><td class="cd">Bluetooth</td></tr>
-      <tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
-      <tr><td class="ce">Tela</td> <td class="cd">Resolução equivalente a tela de 25"</td></tr>
-      <tr><td rowspan="2"class="ce">Camera</td> <td class="cd">5MP para fotos</td></tr>
-      <tr><td class="cd">720p para vídeos</td></tr>
-      <tr><td rowspan="2"class="ce">Conectividade</td> <td class="cd">Wi-Fi</td></tr>
-      <tr><td class="cd">Bluetooth</td></tr>
-      <tr><td class="ce">Memória Interna</td> <td class="cd">12GB</td></tr>
+					<tr><td class="col-esquerda">/etc/freeradius//3.0/clientes.conf</td> <td class="col-direita">Incluir a rede e máscara dos APs que irão solicitar ao FreeRadius a conexão e a chave que foi cadastrada quando a rede dos APs foi criada.</td></tr>
 
-    </table>
+					<tr><td class="col-esquerda">/etc/freeradius/3.0/radiusd.conf</td> <td class="col-direita">Ativar as duas regras que se referem à conexão do FreeRadius com o banco de dados MySQL.</td></tr>
 
-      <h2>Como funciona</h2>
-      <p> falta colocar contexto.</p>
+					<tr><td class="col-esquerda">/etc/freeradius//3.0/clientes.conf</td> <td class="col-direita">Wi-Fi</td></tr>
+					
+					<tr><td class="col-esquerda">/etc/freeradius/3.0/sites-enabled/default</td> <td class="col-direita">Definir a permissão de autenticação dos usuários que solicitarem a conexão ao FreeRadius em um banco de dados MySQL.</td></tr>
+					
+					<tr><td class="col-esquerda">/etc/freeradius/3.0/sites-enabled/inner-tunnel</td> <td class="col-direita">Definir a permissão de autenticação dos usuários que solicitarem a conexão ao FreeRadius em um banco de dados MySQL.</td></tr>
 
-      <h2> servidor</h2>
-      <p>servidor “super-<wbr>humano”, contexto.</p>
+					<tr><td class="col-esquerda">/etc/freeradius/mods-enabled/eap.conf </td> <td class="col-direita">Escolha do tipo de protocolo EAP que será utilizado para a autenticação dos usuários no FreeRadius.</td></tr>
 
-          
-      <video id="filmes02" controls="controls" poster="img/video-mini01.jpg">
-        <source src="movie/how-it-feels.mp4" type="video/mp4"/>
-        Desculpe, mas não foi possível carregar o video.  
-      </video> 
-        
-    </article>
-  </section>
-  <aside id="lateral">
-    <h1>Outras Notícias</h1>
-    <h2>Vídeo mais recente</h2>
-    
-    <video id="filme01" controls="controls" poster="img/video-mini02.jpg">
-      <source src="movie/on-day.mp4" type="video/mp4"/>
-      Desculpe, mas não foi possível carregar o video.  
-    </video> 
+					<tr><td class="col-esquerda">/etc/freeradius/mods-enabled/always</td> <td class="col-direita">Configuração de conexões simultâneas.</td></tr>
+					
+				</table>
 
-    <h2>Novidades no Servidor RADIUS</h2>
-    <p>O Servidor de autenticação .</p>
+					<h2> Como funciona </h2>
+					<p> De acordo com fontes próximas do Google, os óculos vão contar com uma pequena tela de LCD ou AMOLED na parte superior e em frente aos olhos do usuário. Com o uso de uma câmera e GPS, você pode se situar, assim como selecionar opções com o movimento da cabeça. </p>
 
-    <p> contexto.</p>
-    
-  </aside>
+					<!-- tag-wbr para quebra de palavra -->
+					<h2> O que você pode fazer com o servidor de autenticação RADIUS </h2>
+					<p> O vídeo de divulgação do Google mostra que você pode se transformar em uma espécie de “super-<wbr/>humano”, já que o aparelho pode indicar a quantos metros você está de seu destino, se o metrô está aberto ou fechado, mostrar o clima, agenda e até mesmo permitir que você marque encontros apenas com comandos de voz. </p>
 
-  <footer id="rodape">
-    <p>Copyright &copy; 2021 - by Israel Silva</br>
-    <a href="http://facebook.com"target="_blank">Facebook</a>
-    <a href="http://twitter.com"target="_blank">Twitter</a></p>
-  </footer>
+							
+					<video id="filmes02" controls="controls" poster="_imagens/video-mini01.jpg">
+							<source src="_media/how-it-feels.mp4" type="video/mp4"/>
+							Desculpe, mas não foi possível carregar o video.  
+					</video> 
+			</article>
+    </section>
 
-</div>
-
+		<!-- Área de rodape -->
+		<footer id="rodape">
+			<p>Copyright &copy; 2021 - by Israel Silva </br>
+			<a href="http://facebook.com/"target="_blank">Facebook</a>
+			<a href="http://twitter.com/"target="_blank">Twitter</a></p>
+		</footer>
+    </div>
 </body>
-
 </html>
