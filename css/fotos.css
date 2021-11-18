@@ -1,15 +1,15 @@
 @charset "UTF-8";
-* {
+/* * {
 	box-sizing: border-box;
 	margin: 0;
-}
+} */
 html {
 	font: 16px Arial, Helvetica, sans-serif;
 }
 header {
 	display: flex;
 	flex-direction: column;
-	height: 100vh;
+	height: 30vh;
 }
 .slider {
 	flex: 1;
