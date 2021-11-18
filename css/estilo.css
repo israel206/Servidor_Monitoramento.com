@@ -63,7 +63,7 @@ header#cabecalho h2{
 /* formatacao de imagens com legendas*/
 figure.foto-legenda{
 	position: relative;
-	border: 8px solid red;
+	border: 8px solid rgb(160, 153, 153);
 	box-shadow: 1px 1px 4px black;
 }
 figure.foto-legenda img{
@@ -86,18 +86,14 @@ figure.foto-legenda:hover figcaption{
 	opacity:1;
 }
 video#filmes02 {
+	/* border: 8px solid red; */
+	border: 8px solid rgb(160, 153, 153);
+	box-shadow: 1px 1px 4px black;
 	display: block;
 	position: relative;
-	height: 400px;
+	height: 338px;
 	width: 600px;
 }
-video#filme01 {
-	display: block;
-	position: relative;
-	height: 400px;
-	width: 600px;
-}
-	
 /* formatacao de menu absolute*/
 /* # sempre para ID */
  nav#menu{
