@@ -10,7 +10,7 @@
 	</head>
 
 	<script language="javascript" src="js/funcao.js"></script>
-	<script language="javascript" src="js/script.js" defer></script>
+	<script language="javascript" src="js/script.js"></script>
 	<script language="javascript" src="js/util.js"></script>
 
 	<body>
@@ -32,6 +32,7 @@
 					</ul>
 				</nav>
 			</header>
+
 			<section id="corpo-full">
 				<article id="noticia-princiapl">
 					<header id="cabecalho-artigo">
@@ -43,18 +44,23 @@
 						</hgroup>
 					</header>
 
-					<!-- SlideShow da imagens -->
 					<header id="slideshow">
-						<!-- <div class="menu"></div> -->
+						<!-- <div class= menu completo></div> -->
 						<div class="slider">
-							<!-- painel dos botões -->
-							<div class="painel"></div>
+							<!-- painel das imagens que os movimentos| slide--width-->
+							<div class="painel">
+								<div class="item" style="background-image: url('assets/APs-Nas.png');" ></div>
+								<div class="item" style="background-image: url('assets/Esboco-APs-UFPB.png');" ></div>
+								<div class="item" style="background-image: url('assets/Banda-.png');" ></div>
+							</div>
+							<!-- botões de controles -->
 							<div class="controles">
 								<div class="controle" onclick="voltar()"><span class="fas fa-angle-left"></span></div>
-								<div class="controle pausa" onclick="togglePausar()"><span class="fas fa-pause"></span></div>
+								<div class="controle-pausa" onclick="togglePausar()"><span class="fas fa-pause"></span></div>
 								<div class="controle" onclick="avancar()"><span class="fas fa-angle-right"></div>
 							</div>
 						</div>
+
 					</header>
 
 					<section>
@@ -65,9 +71,7 @@
 			</section>
 
 			<footer id="rodape">
-				<p>Copyright &copy; 2021 - by Israel Silva</br>
-				<a href="http://facebook.com/"target="_blank">Facebook</a>
-				<a href="http://twitter.com/"target="_blank">Twitter</a></p>
+				<p>Copyright &copy; 2021 - by Israel Silva</br></p>
 			</footer>
 		</div>
 	</body>

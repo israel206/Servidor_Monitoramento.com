@@ -12,14 +12,47 @@ header#slideshow {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
-	height: 50vh;
+	height: 100vh;
+	/* background-color: red; */
 }
 .slider {
 	flex: 1;
 	overflow: hidden;
 	position: relative;
 }
-.slider .controles {
+.painel {
+	display: flex;
+	height: 100%;
+	transition: all ease 0.3s;
+}
+
+.item {
+	width: 100vw;
+	height: inherit;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+/* .slider .item .info {
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	height: 30%;
+	min-height: 160px;
+	padding: 1.5rem 0;
+	text-align: center;
+	font-size: 1.25rem;
+	background: rgba(0, 0, 0, 0.5);
+	color: white;
+}
+
+.item .info .titulo {
+	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
+} */
+
+.controles {
 	position: absolute;
 	bottom: 1rem;
 	display: flex;
@@ -28,7 +61,7 @@ header#slideshow {
 	width: 100%;
 	background-color: transparent;
 }
-.slider .controle {
+.controle {
 	width: 1.75rem;
 	height: 1.75rem;
 	margin: 0 0 0 1rem;
@@ -42,36 +75,8 @@ header#slideshow {
 	overflow: hidden;
 	cursor: pointer;
 }
-.slider .controle.pausa {
+.controle-pausa {
 	width: 2.5rem;
 	height: 2.5rem;
 	line-height: 2.5rem;
-}
-.slider .painel {
-	display: flex;
-	height: 100%;
-	transition: margin ease 600ms;
-}
-.slider .item {
-	width: 100vw;
-	height: inherit;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-.slider .item .info {
-	position: absolute;
-	bottom: 0;
-	width: 100vw;
-	height: 30%;
-	min-height: 160px;
-	padding: 1.5rem 0;
-	text-align: center;
-	font-size: 1.25rem;
-	background: rgba(0, 0, 0, 0.5);
-	color: white;
-}
-.slider .item .info .titulo {
-	margin-bottom: 0.5rem;
-	font-size: 1.5rem;
 }
