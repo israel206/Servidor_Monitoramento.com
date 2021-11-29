@@ -48,6 +48,7 @@
 						<h2>Instalação do PHP</h2><br>
 						<p>A instalação do PHP e suas dependências, é um requisito para o funcionamento das ferramentas de gerenciamento. Sem essas instalações, as aplicações web administrativas não funcionarão</p><br>
 						<div class="config">
+							<span>// Instalação</span><br>
 						 <p># sudo apt -y install php libapache2-mod-php php-{gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl,cgiph,phpseclib}</p>
 						</div>
 					</div>
@@ -58,7 +59,9 @@
 						<h2>Servidor apache HTTP</h2><br>
 						<p>O servidor apache HTTP e sua instalação e ativação da reescrita do servidor. Mostra-se ainda como deve-se baixar o servidor apache http e configurar para o seu funcionamento.</p><br>
 						<div class="config">
+							<span>// Instalação</span><br>
 							<p># sudo apt install apache2 apache2-utils</p>
+							<span>// Ativação da reescrita</span><br>
 							<p># sudo a2enmod rewrite</p>
 						</div>
 					</div>
@@ -75,11 +78,11 @@
 							<p># sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8</p>
 							<span>// Adicionando o repositório apt</span><br>
 							<p># sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mysql.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"</p>
-							<span>// Instalando mysql/mariadb</span><br>
-							<p># sudo apt -y install mysql-server mariadb-client</p>
+							<span>// Instalando mysql</span><br>
+							<p># sudo apt -y install mysql-server mysql-client</p>
 							<span>// Adicionando políticas do servidor</span><br>
 							<p># sudo apt policy mysql-server</p>
-							<span>// Instalando a segurança do </span>
+							<span>// Instalando a segurança do banco de dados</span>
 							<p># sudo mysql_secure_installation</p>
 							<span>// Entrando no banco</span>
 							<p>#mysql –u root –p</p>
@@ -90,9 +93,7 @@
 							<p>GRANT ALL ON radius.* TO radius@localhost IDENTIFIED BY "senhaSecret";</p>
 							<p>FLUSH PRIVILEGES;</p>
 							<p>QUIT;</p>
-							<span>// Adicionando tabela schema.sql e nas.sql</span>
-							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/schema.sql</p>
-							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/nas.sql</p>
+							
 						</div>
 					</div>
 					
@@ -102,30 +103,32 @@
 						<h2>Instalação do projeto FreeRadius e configuração do servidor</h2><br>
 						<p>A instalação FreeRadius e sua configuração baseia-se na edição de alguns scripts de arquivos. Usando um editor via terminal, tais como nano ou vim, deve-se editar o arquivo /etc/freeradius/3.0/sql.conf, por meio da linha de comando # nano /etc/freeradius/3.0/sql.conf. Deve-se, então, editar as linhas referentes às informações do servidor, login e senha de acesso. Após a alteração, o sistema deve ser reiniciado, por meio do comando # reboot. Após reiniciar o sistema, deve-se fazer a alteração da autorização do “file” para “sql ”, isto é, ligar as contas e autorizações dos utilizadores no FreeRadius à base dados (radius) criada no MySQL. O próximo passo envolve a edição do arquivo /etc/freeradius/sites-enabled/default. Primeiramente, deve-se adicionar o cardinal (#), ou seja, comentar a linha de código onde se encontra a palavra “files”. Posteriormente, deve-se remover todos os comentários (#) onde se encontram as palavras “sql” nas respectivas seções, como mostra.</p><br>
 						<div class="config">
-						 	<span>// Instalação da propriedade software</span><br>
-								<p># sudo apt install software-properties-common</p>
-							<span>// Importa a chave gpg</span><br>
-							<p># sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8</p>
-							<span>// Adicionando o repositório apt</span><br>
-							<p># sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mysql.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"</p>
-							<span>// Instalando mysql/mariadb</span><br>
-							<p># sudo apt -y install mysql-server mariadb-client</p>
-							<span>// Adicionando políticas do servidor</span><br>
-							<p># sudo apt policy mysql-server</p>
-							<span>// Instalando a segurança do </span>
-							<p># sudo mysql_secure_installation</p>
-							<span>// Entrando no banco</span>
-							<p>#mysql –u root –p</p>
-							<span>// Digitando senha</span>
-							<p>enter password:</p>
-							<span>// Criando banco de dados radius</span>
-							<p>CREATE DATABASE radius;</p>
-							<p>GRANT ALL ON radius.* TO radius@localhost IDENTIFIED BY "senhaSecret";</p>
-							<p>FLUSH PRIVILEGES;</p>
-							<p>QUIT;</p>
-							<span>// Adicionando tabela schema.sql e nas.sql</span>
-							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/schema.sql</p>
-							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/nas.sql</p>
+						 	<span>// Instalação do FreeRadius</span><br>
+							<p># sudo apt install freeradius freeradius-mysql freeradius-utils</p>
+							<span>// Importando scheme de tabelas do banco o schema.sql</span>
+							<p># mysql -u radius -p radius < /etc/freeradius/3.0/mods-config/sql/main/mysql/schema.sql</p>
+							<span>// Criando link e habilitando</span><br>
+							<p># sudo ln -s /etc/freeradius/3.0/mods-available/sql /etc/freeradius/3.0/mods-enabled/</p>
+							<span>// Editando arquivo default</span><br>
+							<p># nano /etc/freeradius/3.0/sites-available/default</p>
+							<span>// Alterar as seções: Liberar sql, “-sql” mudando “sql”</span><br>
+							<p> // authorize, accounting, session, post-auth</p>
+							<span>// Editando arquivo sql </span>
+							<p># nano /etc/freeradius/3.0/mods-available/sql</p>
+							<span>------------- Editado --------------</span>
+							<p>driver = "rlm_sql_mysql"</p>
+							<p>dialect = "mysql"</p>
+							<p>server = "localhost"</p>
+							<p>port = 3306</p>
+							<p>login = "radius"</p>
+							<p>password = "senhaSecret</p>
+							<p>radius_db = "radius"</p>
+							<p>read_clients = yes</p>
+							<p>client_table = "nas"</p>
+							<span>// Criando grupos</span>
+							<p>ent# sudo chgrp -h freerad /etc/freeradius/3.0/mods-available/sql</p>
+							<p># sudo chown -R freerad:freerad /etc/freeradius/3.0/mods-enabled/sql</p>
+							
 						</div>
 					</div>
 					
