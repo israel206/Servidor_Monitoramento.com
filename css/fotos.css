@@ -7,8 +7,10 @@
 
 } */
 #content{
+	/* background-color: blueviolet; */
+	border: 5px solid rgb(10, 10, 10);
 	height: 700px;
-	width: 1500px;
+	width: 1190px;
 	border-radius: 20px;
 	overflow: hidden;
 	/* position: absolute;
@@ -24,18 +26,19 @@
 	transform: translate(-50%);
 	display: flex;
 }
-/*
+
 .bar{
 	width: 70px;
-	height: 17px;
-	border: 2px solid #fff;
-	margin: 6px;
+	height: 20px;
+	border: 2px solid rgb(10, 10, 10);
+	margin: 5px;
+	border-radius: 5px;
 	cursor: pointer;
 	transition: .4s;
 }
 
 .bar:hover{
-	background-color: #fff;
+	background-color: rgb(122, 11, 11);
 }
 
 input{
@@ -44,9 +47,10 @@ input{
 
 #slides{
 	display: flex;
-	width: 90%;
+	width: 500%;
 	height: 100%;
 }
+
 .slide{
 	width: 20%;
 	transition: .6s;
@@ -67,4 +71,4 @@ input{
 
 #slide3:checked ~ .s1{
 	margin-left: -40%;
-} */
+}
