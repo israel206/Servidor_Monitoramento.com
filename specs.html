@@ -181,6 +181,31 @@
 					<br><br>
 
 					<div class="install">
+						<h2>Script de Visualização das configurações feitas</h2>
+						<p>Neste script abaixo você poderá visualizar todas as configurações que foram feitas no servidor autenticação RADIUS, logs de autenticação direito pelo servidor.</p>
+						<div class="config">
+							<span>// Descomentando sql</span>
+							<p># cat /etc/freeradius/3.0/sites-enabled/default |grep -v "#" |awk 'NF>0'</p>
+							<span>// Descomentando sql</span>
+							<p># cat /etc/freeradius/3.0/sites-enabled/inner-tunnel |grep -v "#" |awk 'NF>0'</p>
+							<span>// Criando um Nas(Cliente de Autenticação)</span>
+							<p># cat /etc/freeradius/3.0/clients.conf |grep -v "#" |awk 'NF>0'</p>
+							<span>// Descomentando Usuário ou criando um</span>
+							<p>cat /etc/freeradius/3.0/users |grep -v "#" |awk 'NF>0'</p>
+							<span>// Descomentando linha # INCLUDE SQL.conf caso esteja</span>
+							<p>cat /etc/freeradius/3.0/radiusd.conf |grep -v "#" |awk 'NF>0'</p>
+							<span></span>
+							<p>cat /etc/freeradius/3.0/mods-available/always |grep -v "#" |awk 'NF>0'</p>
+							<span>// Verificação de Logs</span>
+							<p>sudo tail -f /var/log/freeradius/3.0/radius.log</p>
+							<span></span>
+							<p>cat /var/www/html/daloradius/library/daloradius.conf.php |grep -v "#" |awk 'NF>0'</p>
+						</div>
+					</div>
+
+					<br><br>
+
+					<div class="install">
 						<h2>Instalação e configuração das ferramentas de gerenciamentos DaloRADIUS</h2><br>
 						<p>É necessário	instalar o Daloradius, obtendo-se a interface de administração do FreeRADIUS, onde o DaloRADIUS é uma plataforma web para o servidor de autenticação RADIUS, destinada a gerenciar Hotspots e uso geral. Ele apresenta um rico gerenciamento de usuários, e relatórios gráficos que se integram com o Google Maps para localização (GIS) utilizando o banco de dados MySQL.</p><br>
 						<div class="config">

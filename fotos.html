@@ -43,25 +43,42 @@
 							<h3 class="direita">Novembro/2021</h3>
 						</hgroup>
 					</header>
+					
+					<br>
 
-					<header id="slideshow">
+					<div id="content">
 						<!-- <div class= menu completo></div> -->
-						<div class="slider">
-							<!-- painel das imagens que os movimentos| slide--width-->
-							<div class="painel">
-								<div class="item" style="background-image: url('assets/APs-Nas.png');" ></div>
-								<div class="item" style="background-image: url('assets/Esboco-APs-UFPB.png');" ></div>
-								<div class="item" style="background-image: url('assets/Banda-.png');" ></div>
+						<div id="slides">
+							<input type="radio" name="radio" id="slide1" checked>
+							<input type="radio" name="radio" id="slide2">
+							<input type="radio" name="radio" id="slide3">
+							<!-- <input type="radio" name="radio" id="slide4">
+							<input type="radio" name="radio" id="slide5">
+							<input type="radio" name="radio" id="slide6">
+							<input type="radio" name="radio" id="slide7">
+							<input type="radio" name="radio" id="slide8">
+							<input type="radio" name="radio" id="slide9">
+							<input type="radio" name="radio" id="slide10"> -->
+							
+							<div class="slide s1">
+								<img id="image-slides" src="assets/APs-Nas.png" alt="Roteadores ou APs/Nas">
 							</div>
-							<!-- botões de controles -->
-							<div class="controles">
-								<div class="controle" onclick="voltar()"><span class="fas fa-angle-left"></span></div>
-								<div class="controle-pausa" onclick="togglePausar()"><span class="fas fa-pause"></span></div>
-								<div class="controle" onclick="avancar()"><span class="fas fa-angle-right"></div>
+							<div class="slide">
+								<img id="image-slides" src="assets/Esboco-APs-UFPB.png" alt="Esboços de Funcionamento das APs">
 							</div>
+							<div class="slide">
+								<img id="image-slides" src="assets/Banda-.png" alt="Dados de bandas e conexões">
+							</div>
+							
+						<div class="navigation">
+							<label class="bar" for="slide1"></label>
+							<label class="bar" for="slide2"></label>
+							<label class="bar" for="slide3"></label>
 						</div>
 
-					</header>
+						</div>
+
+					</div>
 
 					<section>
 						<h1>Apresentação de slide acima👆👆</h1>
