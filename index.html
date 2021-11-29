@@ -56,18 +56,18 @@
 				<header id="cabecalho-artigo">
 					<hgroup>
 						<!-- nbsp = Non-breaking Space -->
-						<h3> Servidor de autenticação RADIUS > &nbsp;&nbsp;&nbsp; serviços </h3>
+						<h3> Servidor de autenticação RADIUS > &nbsp;&nbsp;&nbsp; Serviços </h3>
 						<h1> Saiba tudo sobre o Servidor de autenticação RADIUS </h1>
 						<h2> por Israel Silva </h2>
 						<!-- usando Class invés de ID -->
-						<h3 class="direita"> Atualizado em /Novembro/2021 </h3>
+						<h3 class="direita"> Novembro/2021 </h3>
 					</hgroup>
 				</header>
 
 					<h2> O que é </h2>
 					<!-- tag p = paragrafo - &shy = soft hyphen. Burro. -->
 					<!-- tag b = negrito - i OU em = itálico -->
-					<p> O <span style="font-weight:900;"> Servidor de autenticação RADIUS </span> conteudo <a href="http://freeradius.org" target="_blank"><i> Servidor de autenticação RADIUS </i></a> conteudo </p>
+					<p> O <span style="font-weight:900;"> Servidor de autenticação RADIUS </span>, é onde ser realizada a identificação e autenticação do usuário, caso ele esteja cadastrado com a utilização de protocolos de segurança para o acesso da rede wireless, utilizando equipamentos APs (Pontos de Acessos) ingressantes em uma rede, que disponibilizam a internet, com o padrão 802.1X, definido pelo IEEE (Institute of Electrical and Electronics Engineers), que fornece técnicas de criptografia de forma a impedir a interceptação de dados como também o uso da rede por usuários não autorizados. Como foi dito, servidores fazem uso de autenticação para gerenciar o acesso, aliado com uso da criptografia e as técnicas, e também constituída por 3(três) etapas de autenticação, o suplicante que é o equipamento do usuário que pretende se adicionar a rede, o autenticador que é o equipamento da rede de APs que faz o intermediário entre solicitante e o servidor, e por fim, o servidor de autenticação que é responsável por autenticar e autorizar o acesso</p>
 
 				<!-- tag figure = figuração semântica de imagem e legendas -->
 				<figure class="foto-legenda">
@@ -79,8 +79,8 @@
 					</figcaption>
 				</figure>
 
-					<h2> Configuração que foram feitas, onde a tabelas mostrara </h2>
-					<p> conteudo </P>
+				<h2> Configuração que foram feitas, onde a tabela mostrara </h2>
+				<p> A Tabela mostra a configuração do servidor de autenticação RADIUS utilizando a ferramentas de projeto do software FreeRadius, com todos os arquivos que foram configurados. </P>
 
 				<h2> Especificações Técnicas </h2>
 				<!-- tag table = tabelas -->
@@ -109,12 +109,10 @@
 				</table>
 
 					<h2> Como funciona </h2>
-					<p> Conteudo </p>
+					<p> Para entender melhor o passo de autenticação tem-se: o equipamento autenticador, ao detectar um suplicante, envia frames de requisição de identidade EAP a este solicitando sua identificação. O suplicante envia um pacote de resposta de identidade EAP contendo uma identificação do suplicante, como o nome de usuário e senha. Ao receber os frames de resposta EAP do suplicante o autenticador os encapsula em um pacote RADIUS do tipo Pedido de Acesso (Access Request) e envia ao Servidor de Autenticação. Ao receber um pacote de Access Request o servidor de autenticação inicia uma negociação com o suplicante para decidir o método EAP que será utilizado para a troca de informações de autenticação. Decidido o método de autenticação, o servidor de autenticação requisita as informações de autenticação ao suplicante. Se as credenciais contidas na resposta do suplicante forem encontradas na base de informações do servidor, este responde com um pacote de Acesso Aceito (Access Accept), caso contrário, responde com um pacote de Rejeitar Acesso (Access Reject). Toda a comunicação entre o servidor de autenticação e o suplicante é traduzida pelo autenticador. Ao receber um pacote RADIUS de Access Accept do servidor o autenticador libera o acesso à rede, como mostra a Figura 5. Todo esse processo acontece de forma não visível ao usuário. Já na Figura 6, mostra-se todo o processo de escolha da autenticação e verificação das credenciais visíveis ao usuário </p>
 
 					<!-- tag-wbr para quebra de palavra -->
-					<h2> O que você pode fazer com o servidor de autenticação RADIUS </h2>
-					<p> Conteudo </p>
-	
+					<h2> Um video que mostra como esta funcionando quando tudo estive emplementado</h2>
 					<video id="filmes02" controls="controls" poster="assets/video-mini01.jpg">
 							<source src="movie/" type="video/mp4"/>
 							Desculpe, mas não foi possível carregar o video.  
