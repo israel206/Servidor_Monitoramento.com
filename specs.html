@@ -36,22 +36,101 @@
 				<header id="cabecalho-artigo">
 					<hgroup>
 						<h3> Servidor de autenticação RADIUS > Especificações </h3>
-						<h1> Raio-X do servidor autenticação </h1>
+						<h1> Raio-X do servidor autenticação. Um tutorial de configuração </h1>
 						<h2> Israel Silva </h2>
 						<h3 class="direita"> Novembro/2021 </h3>
 					</hgroup>
 				</header>
-		
-					<h3> Servidor RADIUS, tutorial de configuração </h3>
-					<p> O servidor de autenticação RADIUS, é onde é realizada a identificação e autenticação do usuário, caso ele esteja cadastrado com a utilização de protocolos de segurança para o acesso da rede wireless, utilizando equipamentos APs (Pontos de Acessos) ingressantes em uma rede, que disponibilizam a internet, com o padrão 802.1X, definido pelo IEEE (Institute of Electrical and Electronics Engineers), que fornece técnicas de criptografia de forma a impedir a interceptação de dados como também o uso da rede por usuários não autorizados (IEEE802, 2021). </p>
-					<div class="content">
 					
+				<section id="conteudo">
+					
+					<div class="install">
+						<h2>Instalação do PHP</h2><br>
+						<p>A instalação do PHP e suas dependências, é um requisito para o funcionamento das ferramentas de gerenciamento. Sem essas instalações, as aplicações web administrativas não funcionarão</p><br>
+						<div class="config">
+						 <p># sudo apt -y install php libapache2-mod-php php-{gd,common,mail,mail-mime,mysql,pear,db,mbstring,xml,curl,cgiph,phpseclib}</p>
+						</div>
+					</div>
+
+					<br><br>
+
+					<div class="install">
+						<h2>Servidor apache HTTP</h2><br>
+						<p>O servidor apache HTTP e sua instalação e ativação da reescrita do servidor. Mostra-se ainda como deve-se baixar o servidor apache http e configurar para o seu funcionamento.</p><br>
+						<div class="config">
+							<p># sudo apt install apache2 apache2-utils</p>
+							<p># sudo a2enmod rewrite</p>
+						</div>
 					</div>
 					
+					<br><br>
 
-				<section id="conteudo">
-					<h3> Tutorial do servidor RADIUS </h3>
-					<p> Conteudo </p>
+					<div class="install">
+						<h2>Instalação da base de dados e configuração</h2><br>
+						<p>O primeiro passo para utilização do projeto FreeRadius envolve a instalação e a criação do banco de dados, que armazenará todos os dados dos utilizadores que serão definidos para autenticação. As estruturas das tabelas já são definidas por default, basta apenas realizar a criação do banco de dados no MySQL, inserir as tabelas e definir os privilégios de acesso, como é mostrado. Para executar os comandos ou script, o usuário deve estar logado, ou como root.</p><br>
+						<div class="config">
+						 	<span>// Instalação da propriedade software</span><br>
+								<p># sudo apt install software-properties-common</p>
+							<span>// Importa a chave gpg</span><br>
+							<p># sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8</p>
+							<span>// Adicionando o repositório apt</span><br>
+							<p># sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mysql.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"</p>
+							<span>// Instalando mysql/mariadb</span><br>
+							<p># sudo apt -y install mysql-server mariadb-client</p>
+							<span>// Adicionando políticas do servidor</span><br>
+							<p># sudo apt policy mysql-server</p>
+							<span>// Instalando a segurança do </span>
+							<p># sudo mysql_secure_installation</p>
+							<span>// Entrando no banco</span>
+							<p>#mysql –u root –p</p>
+							<span>// Digitando senha</span>
+							<p>enter password:</p>
+							<span>// Criando banco de dados radius</span>
+							<p>CREATE DATABASE radius;</p>
+							<p>GRANT ALL ON radius.* TO radius@localhost IDENTIFIED BY "senhaSecret";</p>
+							<p>FLUSH PRIVILEGES;</p>
+							<p>QUIT;</p>
+							<span>// Adicionando tabela schema.sql e nas.sql</span>
+							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/schema.sql</p>
+							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/nas.sql</p>
+						</div>
+					</div>
+					
+					<br><br>
+
+					<div class="install">
+						<h2>Instalação do projeto FreeRadius e configuração do servidor</h2><br>
+						<p>A instalação FreeRadius e sua configuração baseia-se na edição de alguns scripts de arquivos. Usando um editor via terminal, tais como nano ou vim, deve-se editar o arquivo /etc/freeradius/3.0/sql.conf, por meio da linha de comando # nano /etc/freeradius/3.0/sql.conf. Deve-se, então, editar as linhas referentes às informações do servidor, login e senha de acesso. Após a alteração, o sistema deve ser reiniciado, por meio do comando # reboot. Após reiniciar o sistema, deve-se fazer a alteração da autorização do “file” para “sql ”, isto é, ligar as contas e autorizações dos utilizadores no FreeRadius à base dados (radius) criada no MySQL. O próximo passo envolve a edição do arquivo /etc/freeradius/sites-enabled/default. Primeiramente, deve-se adicionar o cardinal (#), ou seja, comentar a linha de código onde se encontra a palavra “files”. Posteriormente, deve-se remover todos os comentários (#) onde se encontram as palavras “sql” nas respectivas seções, como mostra.</p><br>
+						<div class="config">
+						 	<span>// Instalação da propriedade software</span><br>
+								<p># sudo apt install software-properties-common</p>
+							<span>// Importa a chave gpg</span><br>
+							<p># sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8</p>
+							<span>// Adicionando o repositório apt</span><br>
+							<p># sudo add-apt-repository "deb [arch=amd64,arm64,ppc64el] http://mysql.mirror.liquidtelecom.com/repo/10.4/ubuntu $(lsb_release -cs) main"</p>
+							<span>// Instalando mysql/mariadb</span><br>
+							<p># sudo apt -y install mysql-server mariadb-client</p>
+							<span>// Adicionando políticas do servidor</span><br>
+							<p># sudo apt policy mysql-server</p>
+							<span>// Instalando a segurança do </span>
+							<p># sudo mysql_secure_installation</p>
+							<span>// Entrando no banco</span>
+							<p>#mysql –u root –p</p>
+							<span>// Digitando senha</span>
+							<p>enter password:</p>
+							<span>// Criando banco de dados radius</span>
+							<p>CREATE DATABASE radius;</p>
+							<p>GRANT ALL ON radius.* TO radius@localhost IDENTIFIED BY "senhaSecret";</p>
+							<p>FLUSH PRIVILEGES;</p>
+							<p>QUIT;</p>
+							<span>// Adicionando tabela schema.sql e nas.sql</span>
+							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/schema.sql</p>
+							<p># mysql –u root –p radius < /etc/freeradius/3.0/sql/mysql/nas.sql</p>
+						</div>
+					</div>
+					
+					<br><br>
+				
 						
 				</section>
 			</article>
