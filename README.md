@@ -3,11 +3,9 @@
 </h1>
 
 <p align="center">
-  <a href="#technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Getting started</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-license">License</a>
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-licença">Licença</a>
 </p>
 
 <p align="center">
@@ -28,9 +26,9 @@
 
 ---
 
-## 🚀 Technologies
+## ✨🚀 Tecnologias
 
-This project was developed using the following technologies:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [Html](https://www.w3schools.com/html/)
 - [Css](https://www.w3schools.com/css/default.asp)
@@ -38,9 +36,9 @@ This project was developed using the following technologies:
 
 ---
 
-## 👨‍💻 Computer: How to run
+## 👨‍💻 Computador: como executar
 
-**Clone the project and access the folder**
+**Clone o projeto e acesse a pasta**
 
   ```bash
     # clone repository
@@ -49,20 +47,20 @@ This project was developed using the following technologies:
 
 ---
 
-## 💻 Project
+## 💻 Projeto
 
-developing web application
-
----
-
-## 📝 License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
+É um tutorial de um Servidor de autenticação RADIUS implementado  no Universidade Federal da Paraíba campus IV Rio Tinto-PB
 
 ---
 
-Made with 💜💚💙[by Israel Silva](https://israel206.github.io/) 👋 </br>
-Made with 💜💚💙[by Israel Silva](https://portfolio-next-israel.vercel.app/) 👋
+## 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
+
+Feito com 💜💚💙[by Israel Silva](https://israel206.github.io/) 👋 </br>
+Feito com 💜💚💙[by Israel Silva](https://portfolio-next-israel.vercel.app/) 👋
 
 [ts]: https://www.typescriptlang.org
 [vscode]: https://code.visualstudio.com/
