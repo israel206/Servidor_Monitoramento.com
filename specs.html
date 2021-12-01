@@ -53,11 +53,17 @@
 						</div>
 					</div>
 
-					<br><br>
+					<br>
 
 					<div class="install">
-						<h2>Servidor apache HTTP</h2><br>
-						<p>O servidor apache HTTP e sua instalação e ativação da reescrita do servidor. Mostra-se ainda como deve-se baixar o servidor apache http e configurar para o seu funcionamento.</p><br>
+						<h2>Servidor apache HTTP</h2>
+						
+						<br>
+
+						<p>O servidor apache HTTP e sua instalação e ativação da reescrita do servidor. Mostra-se ainda como deve-se baixar o servidor apache http e configurar para o seu funcionamento.</p>
+						
+						<br>
+
 						<div class="config">
 							<span>// Instalação</span><br>
 							<p># sudo apt install apache2 apache2-utils</p>
@@ -66,14 +72,20 @@
 						</div>
 					</div>
 					
-					<br><br>
+					<br>
 
 					<div class="install">
-						<h2>Instalação da base de dados e configuração</h2><br>
-						<p>O primeiro passo para utilização do projeto FreeRadius envolve a instalação e a criação do banco de dados, que armazenará todos os dados dos utilizadores que serão definidos para autenticação. As estruturas das tabelas já são definidas por default, basta apenas realizar a criação do banco de dados no MySQL, inserir as tabelas e definir os privilégios de acesso, como é mostrado. Para executar os comandos ou script, o usuário deve estar logado, ou como root.</p><br>
+						<h2>Instalação da base de dados e configuração</h2>
+						
+						<br>
+
+						<p>O primeiro passo para utilização do projeto FreeRadius envolve a instalação e a criação do banco de dados, que armazenará todos os dados dos utilizadores que serão definidos para autenticação. As estruturas das tabelas já são definidas por default, basta apenas realizar a criação do banco de dados no MySQL, inserir as tabelas e definir os privilégios de acesso, como é mostrado. Para executar os comandos ou script, o usuário deve estar logado, ou como root.</p>
+						
+						<br>
+
 						<div class="config">
 						 	<span>// Instalação da propriedade software</span><br>
-								<p># sudo apt install software-properties-common</p>
+							<p># sudo apt install software-properties-common</p>
 							<span>// Importa a chave gpg</span><br>
 							<p># sudo apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8</p>
 							<span>// Adicionando o repositório apt</span><br>
@@ -96,11 +108,13 @@
 						</div>
 					</div>
 					
-					<br><br>
+					<br>
 
 					<div class="install">
 						<h2>Instalação do projeto FreeRadius e configuração do servidor</h2><br>
-						<p>A instalação FreeRadius e sua configuração baseia-se na edição de alguns scripts de arquivos. Usando um editor via terminal, tais como nano ou vim, deve-se editar o arquivo /etc/freeradius/3.0/sql.conf, por meio da linha de comando # nano /etc/freeradius/3.0/sql.conf. Deve-se, então, editar as linhas referentes às informações do servidor, login e senha de acesso. Após a alteração, o sistema deve ser reiniciado, por meio do comando # reboot. Após reiniciar o sistema, deve-se fazer a alteração da autorização do “file” para “sql ”, isto é, ligar as contas e autorizações dos utilizadores no FreeRadius à base dados (radius) criada no MySQL. O próximo passo envolve a edição do arquivo /etc/freeradius/sites-enabled/default. Primeiramente, deve-se adicionar o cardinal (#), ou seja, comentar a linha de código onde se encontra a palavra “files”. Posteriormente, deve-se remover todos os comentários (#) onde se encontram as palavras “sql” nas respectivas seções, como mostra.</p><br>
+						<p>A instalação FreeRadius e sua configuração baseia-se na edição de alguns scripts de arquivos. Usando um editor via terminal, tais como nano ou vim, deve-se editar o arquivo /etc/freeradius/3.0/sql.conf, por meio da linha de comando # nano /etc/freeradius/3.0/sql.conf. Deve-se, então, editar as linhas referentes às informações do servidor, login e senha de acesso. Após a alteração, o sistema deve ser reiniciado, por meio do comando # reboot. Após reiniciar o sistema, deve-se fazer a alteração da autorização do “file” para “sql ”, isto é, ligar as contas e autorizações dos utilizadores no FreeRadius à base dados (radius) criada no MySQL. O próximo passo envolve a edição do arquivo /etc/freeradius/sites-enabled/default. Primeiramente, deve-se adicionar o cardinal (#), ou seja, comentar a linha de código onde se encontra a palavra “files”. Posteriormente, deve-se remover todos os comentários (#) onde se encontram as palavras “sql” nas respectivas seções, como mostra.</p>
+						
+						<br>
 						
 						<div class="config">
 						 	<span>// Instalação do FreeRadius</span><br>
@@ -127,11 +141,15 @@
 							<p>read_clients = yes</p>
 							<p>client_table = "nas"</p>
 							<span>// Criando grupos</span>
-							<p>ent# sudo chgrp -h freerad /etc/freeradius/3.0/mods-available/sql</p>
+							<p># sudo chgrp -h freerad /etc/freeradius/3.0/mods-available/sql</p>
 							<p># sudo chown -R freerad:freerad /etc/freeradius/3.0/mods-enabled/sql</p>
-						</div> <br>
+						</div> 
+						
+						<br>
 
 						<p>Agora o próximo passo é editar o arquivo /etc/freeradius/3.0/clients.conf, definindo a palavra-chave em “secret” para o FreeRadius. A palavra “secret” funciona como um comando padrão no FreeRadius, como pode-se ver abaixo</p>
+
+						<br>
 
 						<div class="config">
 							<span>// Criando um Nas(Cliente de Autenticação)</span>
@@ -141,16 +159,28 @@
 							<p>}</p>
 						</div>
 
+						<br>
+
 						<p>A seguir, deve-se editar o arquivo /etc/freeradius/3.0/users desfazer o comentário, isto é, apagar os símbolos (#) no arquivo para que o programa não ignore as linhas que estavam comentadas, a partir do comando # nano /etc/freeradius/3.0/users. Neste caso é necessário apagar os símbolos para que os comandos desejados sejam executados sem problemas, desconsiderando as linhas “bob” que são padrão no ubuntu. No arquivo users também é necessário apagar o símbolo (#) nas linhas.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// Descomentando Usuário</span>
 							<p>"bob" Auth-Type := Local, User-Password == "hello"</p>
 							<p>Reply-Message = "Hello, %u"</p>
 						</div>
 
-						<p>Para finalizar a configuração é preciso editar o arquivo /etc/freeradius/3.0/radiusd.conf e excluir o comentário (#) na linha que apresenta o comando # INCLUDE SQL.conf, caso esteja.</p>
 						<br>
+
+						<p>Para finalizar a configuração é preciso editar o arquivo /etc/freeradius/3.0/radiusd.conf e excluir o comentário (#) na linha que apresenta o comando # INCLUDE SQL.conf, caso esteja.</p>
+
+						<br>
+
 						<p>Agora testa-se o usuário para verificar o funcionamento do FreeRadius, e para isso deve-se testar o registro de usuários no MySQL para autenticação. Registra-se um usuário e verifica-se a conexão.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// entrando no banco de dados</span>
 							<p># mysql -u root -p</p>
@@ -163,7 +193,12 @@
 							<p>Mysql> exit;</p>
 						</div>
 
+						<br>
+						
 						<p>Depois deve-se, então, reiniciar o FreeRadius e testar a conexão.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// Reiniciando o FreeRadius</span>
 							<p># systemctl restart freeradius</p>
@@ -179,11 +214,14 @@
 						</div>
 					</div>
 					
-					<br><br>
+					<br>
 
 					<div class="install">
-						<h2>Script de Visualização das configurações feitas</h2>
+						<h2>Script de Visualização das configurações feitas</h2><br>
 						<p>Neste script abaixo você poderá visualizar todas as configurações que foram feitas no servidor autenticação RADIUS, logs de autenticação direito pelo servidor.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// Descomentando sql</span>
 							<p># cat /etc/freeradius/3.0/sites-enabled/default |grep -v "#" |awk 'NF>0'</p>
@@ -208,7 +246,10 @@
 
 					<div class="install">
 						<h2>Instalação e configuração das ferramentas de gerenciamentos DaloRADIUS</h2><br>
-						<p>É necessário	instalar o Daloradius, obtendo-se a interface de administração do FreeRADIUS, onde o DaloRADIUS é uma plataforma web para o servidor de autenticação RADIUS, destinada a gerenciar Hotspots e uso geral. Ele apresenta um rico gerenciamento de usuários, e relatórios gráficos que se integram com o Google Maps para localização (GIS) utilizando o banco de dados MySQL.</p><br>
+						<p>É necessário	instalar o Daloradius, obtendo-se a interface de administração do FreeRADIUS, onde o DaloRADIUS é uma plataforma web para o servidor de autenticação RADIUS, destinada a gerenciar Hotspots e uso geral. Ele apresenta um rico gerenciamento de usuários, e relatórios gráficos que se integram com o Google Maps para localização (GIS) utilizando o banco de dados MySQL.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// Instalando wget e unzip para as ferramentas</span><br>
 							<p># sudo apt -y install wget unzip</p>
@@ -223,10 +264,14 @@
 							<p># sudo mysql -u root -p radius < contrib/db/mysql-daloradius.sql</p>
 							<span>// Movendo pasta para a pasta html</span>
 							<p># sudo mv daloradius /var/www/html/</p>
-						</div> <br>
+						</div> 
+
+						<br>
 
 						<p>Em seguida, são alteradas as permissões para a pasta html, definindo-se as permissões corretas para o arquivo de configuração DaloRADIUS. Agora deve-se modificar o arquivo daloradius.conf.php para ajustar as informações do banco de dados MySQL. Deve-se abrir o daloradius.conf.php e adicionar o nome de usuário do banco de dados, a senha e o nome do banco de dados. Para ter certeza de que tudo funciona, reinicia-se o FreeRadius e o Apache2 com seguinte comando # sudo systemctl restart freeradius apache2. Agora abre-se o link Admin usando o endereço IP do sistema ou nome de domínio: http://ip-address/daloradius/login.php. Visualização da interface principal do gerenciador do servidor RADIUS funcionando</p>
+
 						<br>
+
 						<div class="config">
 							<span>Criando um novo arquivo </span>
 							<p># sudo mv /var/www/html/daloradius/library/daloradius.conf.php.sample /var/www/html/daloradius/library/daloradius.conf.php</p>
@@ -246,22 +291,27 @@
 						</div>
 					</div>
 
-					<br><br>
+					<br>
 
 					<div class="install">
 						<h2>Instalação e configuração do gerenciamento da base de dados</h2><br>
-						<p>O phpMyAdmin é um administrador web que foi criado para interagir com o MySQL através de uma interface. Na sequência apresenta-se a instalação do phpMyAdmin para que possa ser usado no projeto com segurança para gerenciar os bancos de dados, onde foi seguida a documentação oficial para instalação dessa ferramenta de gerenciamento para a base de dados.</p><br>
+						<p>O phpMyAdmin é um administrador web que foi criado para interagir com o MySQL através de uma interface. Na sequência apresenta-se a instalação do phpMyAdmin para que possa ser usado no projeto com segurança para gerenciar os bancos de dados, onde foi seguida a documentação oficial para instalação dessa ferramenta de gerenciamento para a base de dados.</p>
+
+						<br>
+
 						<div class="config">
 							<span>// Instalação do phpMyAdmin, sua dependência e reiniciando</span><br>
 						 <p># sudo apt install phpmyadmin php-mbstring php-gettext</p>
 						 <p># sudo phpenmod mbstring</p>
 						 <p># sudo systemctl restart apache2</p>
 						</div>
+
 						<br>
+
 						<p>Agora abre-se o link Admin usando o endereço IP do sistema ou nome de domínio: http://ip-address/phpMyAdmin/. Visualização da interface principal do gerenciador do banco de dados estará funcionando</p>
 					</div>
 
-					<br><br>
+					<br>
 
 				</section>
 			</article>
