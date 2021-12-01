@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tudo sobre servidor RADIUS</title>
+	<link rel="stylesheet" href="css/estilo.css"/>
+	<!-- <link rel="stylesheet" href="css/fotos.css"/> -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+  <script language="javascript" src="js/funcao.js"></script>
+	<script language="javascript" src="js/script.js"></script>
+	<script language="javascript" src="js/util.js"></script>
+
+
+  <script>
+    $(document).ready(function(e) {
+      $(a).click(function(e){
+        $('#rolagem').animate({
+          scrollTop: $($.attr(this, 'href')).offset().top + $('#rolagem').scrollTop()
+        }, 500);
+        return false;
+      });
+    });
+  </script>
+
+  <style type="text/css">
+    main {
+      margin: 8px;
+      background-color: #454447;
+      color: #FFFFFF;
+    }
+    #rolagem{
+      /* overflow-y: hidden; */
+      /* height: 500px; */
+      height: 500px;
+      /* overflow-x: hidden; */
+      margin-bottom: 10px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      overflow: hidden;
+    }
+    .caixa-miniatura{
+      border: 1px solid #999;
+      width: 100;
+      display: inline-block;
+      margin-left: 2px;
+      margin-right: 2px;
+      padding: 0px;
+      overflow: hidden;
+      height: 57px;
+    }
+    #miniaturas{
+      text-align: center;
+      position: fixed;
+      bottom: 0px;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0px;
+      right: 0px;
+      border-top: thin solid #757575;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      background-color: #000000;
+    }
+  </style>
+</head>
+
+  <body>
+
+    <div id="interface">
+      <header id="cabecalho">
+        <hgroup>
+          <h1>Servidor RADIUS</h1>
+          <h2>Fotos do servidor funcionando</h2>
+        </hgroup>
+
+        <img id="icone" src="assets/fotos.png"/>
+        <nav id="menu">
+            <h1>Menu Principal</h1>
+          <ul type="disc">
+            <li onmouseover="mudaFoto('assets/home.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="index.html">Home</a></li>
+            <li onmouseover="mudaFoto('assets/especificacoes.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="specs.html">Especificações</a></li>
+            <li onmouseover="mudaFoto('assets/fotos.png')" onmouseout="mudaFoto('assets/freeradius.png')"><a href="galeria.html">Fotos</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <section id="corpo-full">
+        <article id="noticia-princiapl">
+          <header id="cabecalho-artigo">
+            <hgroup>
+              <h3>Servidor de autenticação RADIUS > Fotos</h3>
+              <h1>Galeria de Imagens do Servidor RADIUS</h1>
+              <h2>por Israel Silva</h2>
+              <h3 class="direita">Novembro/2021</h3>
+            </hgroup>
+          </header>
+
+          <main>
+
+            <div id="rolagem">
+              <!-- <h1>Imagens grandes aqui</h1> -->
+              <img src="assets/mapa.png" width="90%" height="100%" id="img1" alt="">
+              <img src="assets/esboc2-radius.png" width="90%" height="100%" id="img2" alt="">
+              <img src="assets/Esboco-APs-UFPB.png" width="90%" height="100%" id="img3" alt="">
+              <img src="assets/Web-DaloRadius.png" width="90%" height="100%" id="img4" alt="">
+              <img src="assets/APs-Nas.png" width="90%" height="100%" id="img5" alt="">
+              <img src="assets/Conexoes.png" width="90%" height="100%" id="img6" alt="">
+              <img src="assets/Controle-Conexao.png" width="90%" height="100%" id="img7" alt="">
+              <img src="assets/UsuariosCad.png" width="90%" height="100%" id="img8" alt="">
+              <img src="assets/Banda.png" width="90%" height="100%" id="img9" alt="">
+              <img src="assets/graficos-logins.png" width="90%" height="100%" id="img10" alt="">
+              <img src="assets/Logs.png" width="90%" height="100%" id="img11" alt="">
+              <img src="assets/graficos.png" width="90%" height="100%" id="img12" alt="">
+            </div>
+
+            <div id="miniaturas">
+              <div class="caixa-miniatura"><a href="#img1"><img src="assets/mapa.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img2"><img src="assets/esboc2-radius.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img3"><img src="assets/Esboco-APs-UFPB.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img4"><img src="assets/Web-DaloRadius.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img5"><img src="assets/APs-Nas.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img6"><img src="assets/Conexoes.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img7"><img src="assets/Controle-Conexao.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img8"><img src="assets/UsuariosCad.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img9"><img src="assets/Banda.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img10"><img src="assets/graficos-logins.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img11"><img src="assets/Logs.png" width="100" height="57" alt=""></a></div>
+              <div class="caixa-miniatura"><a href="#img12"><img src="assets/graficos.png" width="100" height="57" alt=""></a></div>
+            </div>
+            
+          </main>
+
+          <!-- <section>
+            <h1>Apresentação de slide acima👆👆</h1>
+          </section> -->
+            
+        </article>
+      </section>
+
+      <footer id="rodape">
+        <p>Copyright &copy; 2021 - by Israel Silva</br></p>
+      </footer>
+		</div>
+	</body>
+</html>

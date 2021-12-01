@@ -86,43 +86,43 @@ input{
 	font-size: 1.5rem;
 } */
 
-#slide1:checked ~ .s1{
+/* #slide1:checked ~ .s1{
 	margin-left: 0;
 }
 
 #slide2:checked ~ .s1{
-	margin-left: -20%;
-}
-
-#slide3:checked ~ .s1{
-	margin-left: -40%;
-}
-#slide4:checked ~ .s1{
 	margin-left: -60%;
 }
 
-#slide5:checked ~ .s1{
-	margin-left: -80%;
+#slide3:checked ~ .s1{
+	margin-left: -20%;
+}
+#slide4:checked ~ .s1{
+	margin-left: -30%;
 }
 
-/* #slide6:checked ~ .s1{
-	margin-left: -100%;
+#slide5:checked ~ .s1{
+	margin-left: -40%;
+}
+
+#slide6:checked ~ .s1{
+	margin-left: -50%;
 }
 #slide7:checked ~ .s1{
-	margin-left: -120;
+	margin-left: -60;
 }
 
 #slide8:checked ~ .s1{
-	margin-left: -140%;
+	margin-left: -80%;
 }
 
 #slide9:checked ~ .s1{
-	margin-left: -160%;
+	margin-left: -90%;
 }
 #slide10:checked ~ .s1{
-	margin-left: -180%;
-} */
+	margin-left: -100%;
+}
 
-/* #slide11:checked ~ .s1{
+#slide11:checked ~ .s1{
 	margin-left: -200%;
 } */
